@@ -31,3 +31,7 @@ alter table person add column state varchar(2)
 --changeset pepdek:5
 --rollback ALTER TABLE company DROP COLUMN country;
 alter table company add column country varchar(2)
+
+--changeset pepdek:6
+--rollback DELETE FROM company WHERE id=1;
+INSERT INTO company values (1,'pepdek','Straatweg 7','1945AR', 'ARNHEM', 'NLD')
